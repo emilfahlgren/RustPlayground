@@ -2,11 +2,19 @@ import { Button, VerticalBox } from "std-widgets.slint";
 
 export component AppWindow inherits Window {
     GridLayout {
+        padding: 50px;
+        spacing: 25px;
         Row {
             Text {
                 text: "My first app!";
                 horizontal-alignment: center;
                 font-size: 24px;
+            }
+        }
+        Row {
+            Button {
+                text: "Click me";
+                clicked => {self.text = "Clicked";}
             }
         }
     }
